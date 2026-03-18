@@ -1,0 +1,6 @@
+sudo systemctl stop celery
+sudo systemctl stop celery-beat
+sudo systemctl daemon-reload
+sudo systemctl start celery
+sudo systemctl start celery-beat
+celery -A api inspect registered
